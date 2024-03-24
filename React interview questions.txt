@@ -1,0 +1,8 @@
+child and parent communication (props and state) vice versa
+redux overview
+es6 features
+array traversing
+Hooks
+Props
+conditional listing
+

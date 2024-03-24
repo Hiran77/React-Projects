@@ -1,0 +1,24 @@
+useEffect: 
+
+Cleanup Function - 
+
+useEffect(() => {
+    let intervalId = setInterval(() => {
+      // do something like update the state
+    }, 1000);
+
+    // cleanup the timer when component unmout
+    return () => clearInterval(interval);
+  }, []);
+
+
+
+useEffect(() => {
+    let timerId = setTimeout(() => {
+      // do something     
+      timerId = null;
+    }, 3000);
+  
+  // cleanup the timmer when component unmout
+    return () => clearTimeout(timerId);
+  }, []);

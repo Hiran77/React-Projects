@@ -1,0 +1,41 @@
+import "./styles.css";
+import { useState } from "react";
+
+export default function App() {
+  ///////////////////////////////////////////
+  /******** State varaibles assignment ******/
+
+  const [show, setShow] = useState(true);
+
+  return (
+    <div className="container">
+      <button onClick={() => setShow((show) => !show)}> Show / Hide</button>
+      {show ? <h1>Welcome to React Challenges</h1> : null}
+    </div>
+  );
+}
+
+style.css :
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-left: 30%;
+  height: 100vh;
+}
+button {
+  background-color: rebeccapurple;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}

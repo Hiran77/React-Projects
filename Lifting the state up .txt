@@ -1,0 +1,12 @@
+Lifting the state up : 
+
+const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
+
+Here we are using the list as a common pattern in the parent component. 

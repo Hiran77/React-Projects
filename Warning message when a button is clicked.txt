@@ -1,0 +1,56 @@
+App.js :
+
+import React from 'react';
+
+// don't change the Component name "App"
+export default function App() {
+    
+    const [handleButton,sethandleButton]=React.useState(false);
+    
+    const DeleteHandler= () =>{
+        sethandleButton(true);
+    }
+    
+    const ProceedHandler= ()=> {
+        sethandleButton(false);
+    }
+    
+    return (
+      <div>
+        { handleButton ? <div id="alert">
+          <h2>Are you sure?</h2>
+          <p>These changes can't be reverted!</p>
+          <button onClick={ProceedHandler} >Proceed</button>
+        </div> : ''}
+        <button onClick={DeleteHandler}>Delete</button>
+      </div>    
+    );
+}
+
+Style.css:
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: #2d2c2c;
+    color: #959090;
+    text-align: center;
+}
+
+#alert {
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 15rem;
+    border: 2px solid #dd3562;
+    background-color: #776167;
+    color: white;
+}
+
+#alert button {
+    font: inherit;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: #540218;
+}
